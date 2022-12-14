@@ -1,39 +1,26 @@
 package com.fantasy.fantasymod;
 
-import net.minecraft.world.entity.EntityType;
-import net.minecraft.world.inventory.MenuType;
-import net.minecraft.world.item.BlockItem;
-import net.minecraft.world.item.CreativeModeTab;
-import net.minecraft.world.item.Item;
-import net.minecraft.world.level.block.Block;
-import net.minecraft.world.level.block.state.BlockBehaviour;
-import net.minecraft.world.level.material.Material;
+import com.fantasy.fantasymod.blocks.FantasyBlocks;
+import com.fantasy.fantasymod.entities.FantasyEntities;
+import com.fantasy.fantasymod.items.FantasyItems;
+import com.fantasy.fantasymod.menu.FantasyMenu;
+
 import net.minecraftforge.eventbus.api.IEventBus;
 import net.minecraftforge.fml.javafmlmod.FMLJavaModLoadingContext;
 import net.minecraftforge.registries.DeferredRegister;
-import net.minecraftforge.registries.ForgeRegistries;
-import net.minecraftforge.registries.RegistryObject;
 
 public final class FantasyRegistry {
-    private static final DeferredRegister<Block> BLOCKS = DeferredRegister.create(ForgeRegistries.BLOCKS, Fantasy.MODID);
-    private static final DeferredRegister<Item> ITEMS = DeferredRegister.create(ForgeRegistries.ITEMS, Fantasy.MODID);
-    private static final DeferredRegister<EntityType<?>> ENTITY_TYPES = DeferredRegister.create(ForgeRegistries.ENTITY_TYPES, Fantasy.MODID);
-    private static final DeferredRegister<MenuType<?>> MENU_TYPES = DeferredRegister.create(ForgeRegistries.MENU_TYPES, Fantasy.MODID); 
-
     public static void init() {
         IEventBus modEventBus = FMLJavaModLoadingContext.get().getModEventBus();
+        DeferredRegister<?>[] registers = {
+            FantasyBlocks.BLOCKS,
+            FantasyItems.ITEMS,
+            FantasyMenu.MENU_TYPES,
+            FantasyEntities.ENTITY_TYPES
+        };
 
-        BLOCKS.register(modEventBus);
-        ITEMS.register(modEventBus);
-        MENU_TYPES.register(modEventBus);
-        ENTITY_TYPES.register(modEventBus);
+        for (DeferredRegister<?> register : registers) {
+            register.register(modEventBus);
+        }
     }
-
-    // Blocks
-
-    public static final RegistryObject<Block> EXAMPLE_BLOCK = BLOCKS.register("example_block", () -> new Block(BlockBehaviour.Properties.of(Material.STONE)));
-
-    // Items
-    
-    public static final RegistryObject<Item> EXAMPLE_BLOCK_ITEM = ITEMS.register("example_block", () -> new BlockItem(EXAMPLE_BLOCK.get(), new Item.Properties().tab(CreativeModeTab.TAB_BUILDING_BLOCKS)));
 }
