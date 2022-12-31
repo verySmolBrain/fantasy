@@ -1,4 +1,4 @@
-package com.fantasy.fantasymod.entities;
+package com.fantasy.fantasymod.entity;
 
 import com.fantasy.fantasymod.Fantasy;
 

@@ -1,4 +1,4 @@
-package com.fantasy.fantasymod.blocks;
+package com.fantasy.fantasymod.block;
 
 import com.fantasy.fantasymod.Fantasy;
 import net.minecraft.world.level.block.Block;

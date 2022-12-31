@@ -1,8 +1,8 @@
 package com.fantasy.fantasymod;
 
-import com.fantasy.fantasymod.blocks.FantasyBlocks;
-import com.fantasy.fantasymod.entities.FantasyEntities;
-import com.fantasy.fantasymod.items.FantasyItems;
+import com.fantasy.fantasymod.block.FantasyBlocks;
+import com.fantasy.fantasymod.entity.FantasyEntities;
+import com.fantasy.fantasymod.item.FantasyItems;
 import com.fantasy.fantasymod.menu.FantasyMenu;
 
 import net.minecraftforge.eventbus.api.IEventBus;

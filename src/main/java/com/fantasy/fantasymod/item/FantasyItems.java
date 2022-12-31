@@ -1,7 +1,7 @@
-package com.fantasy.fantasymod.items;
+package com.fantasy.fantasymod.item;
 
 import com.fantasy.fantasymod.Fantasy;
-import com.fantasy.fantasymod.items.potions.ArmourPotion;
+import com.fantasy.fantasymod.item.potions.ArmourPotion;
 
 import net.minecraft.world.item.Item;
 import net.minecraft.world.item.alchemy.Potion;

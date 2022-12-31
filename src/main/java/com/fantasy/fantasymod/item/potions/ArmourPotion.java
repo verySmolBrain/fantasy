@@ -1,4 +1,4 @@
-package com.fantasy.fantasymod.items.potions;
+package com.fantasy.fantasymod.item.potions;
 
 import net.minecraft.world.item.alchemy.Potion;
 
