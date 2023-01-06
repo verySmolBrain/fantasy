@@ -11,4 +11,6 @@ import net.minecraftforge.registries.RegistryObject;
 
 public class FantasyItems {
     public static final DeferredRegister<Item> ITEMS = DeferredRegister.create(ForgeRegistries.ITEMS, Fantasy.MODID);
+
+    public static final RegistryObject<Item> ARMOUR_POTION = 
 }

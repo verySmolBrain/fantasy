@@ -1,3 +1,5 @@
 {
-    "item.fantasy.armour_potion": "Armour Potion"
+    "item.minecraft.potion.effect.armour_potion": "Armour Potion",
+    "item.minecraft.splash_potion.effect.armour_potion": "Splash Armour Potion",
+    "item.minecraft.lingering_potion.effect.armour_potion": "Lingering Armour Potion"
 }
