@@ -11,7 +11,4 @@ import net.minecraftforge.registries.RegistryObject;
 
 public class FantasyItems {
     public static final DeferredRegister<Item> ITEMS = DeferredRegister.create(ForgeRegistries.ITEMS, Fantasy.MODID);
-
-    // Potions
-    public static final RegistryObject<Potion> ALCHEMIST_FIRE = ITEMS.register("armour_potion", ArmourPotion::new);
 }
