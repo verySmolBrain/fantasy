@@ -20,6 +20,12 @@ public class FantasyEffects {
             Attributes.ARMOR_TOUGHNESS,
             "3354caa0-8dd6-11ed-a1eb-0242ac120002", (double)0.1F,
             AttributeModifier.Operation.MULTIPLY_TOTAL
-        )
+            )
+            .addAttributeModifier(
+                Attributes.ARMOR,
+            "dd96a4f4-8e6a-11ed-a1eb-0242ac120002",
+            (double)0.1F,
+            AttributeModifier.Operation.MULTIPLY_TOTAL
+            )
     );
 }
