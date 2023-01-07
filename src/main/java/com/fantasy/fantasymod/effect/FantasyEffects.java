@@ -13,8 +13,8 @@ import net.minecraftforge.registries.RegistryObject;
 public class FantasyEffects {
     public static final DeferredRegister<MobEffect> EFFECTS = DeferredRegister.create(ForgeRegistries.MOB_EFFECTS, Fantasy.MODID);
 
-    public static final RegistryObject<MobEffect> ARMOUR = EFFECTS.register(
-        "armour", 
+    public static final RegistryObject<MobEffect> ARMOUR_EFFECT = EFFECTS.register(
+        "armour_effect", 
         () -> (new ArmourEffect(MobEffectCategory.BENEFICIAL, 0xA57B3F))
             .addAttributeModifier(
             Attributes.ARMOR_TOUGHNESS,

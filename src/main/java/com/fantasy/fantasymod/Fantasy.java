@@ -27,19 +27,14 @@ public class Fantasy
     {
         IEventBus modEventBus = FMLJavaModLoadingContext.get().getModEventBus();
 
-        modEventBus.addListener(this::commonSetup);
+        FantasyRegistry.init();
 
-        // Register ourselves for server and other game events we are interested in
+        modEventBus.addListener(this::commonSetup);
         MinecraftForge.EVENT_BUS.register(this);
     }
 
     private void commonSetup(final FMLCommonSetupEvent event)
     {
-        // Some common setup code
-        // LOGGER.info("HELLO FROM COMMON SETUP");
-        // LOGGER.info("DIRT BLOCK >> {}", ForgeRegistries.BLOCKS.getKey(Blocks.DIRT));
-        FantasyRegistry.init(); // Inits registry
-
         ModLoadingContext.get().registerConfig(ModConfig.Type.COMMON, FantasyConfig.COMMON_SPEC);
         ModLoadingContext.get().registerConfig(ModConfig.Type.CLIENT, FantasyConfig.CLIENT_SPEC);
     }
